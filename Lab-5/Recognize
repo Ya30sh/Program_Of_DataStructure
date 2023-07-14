@@ -1,0 +1,28 @@
+1. [Initialize stack by placing a letter 'c' on the top]
+  TOP ← 1
+  S [TOP] ←"c'
+
+2. [Get and PUSH symbols until either 'c' or blank is encountered]
+  NEXT ← NEXTCHAR (STRING)
+  Repeat while NEXT != 'c'
+  If NEXT = ' '
+  Then Write ('Invalid String') Exit
+  Else Call PUSH (S, TOP, NEXT) 
+  NEXT ← NEXTCHAR (STRING)
+
+3. [Scan characters following 'c'; Compare them to the characters on stack]
+  Repeat While S [TOP] != 'c' 
+  NEXT ← NEXTCHAR (STRING)
+  X ← POP (S, TOP)
+  If NEXT 1= X
+  Then Write('INVALID STRING')
+  Exit
+
+4. [Next symbol must be blank]
+  NEXT ← NEXTCHAR (STRING) 
+  If NEXT = ' '
+  Then Write ('VALID STRING')
+  Else Write ('INVALID STRING')
+
+5. [Finished]
+  Exit
