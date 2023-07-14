@@ -1,0 +1,39 @@
+----PUSH(S, TOP, X)----
+	1. [Check for stack overflow]
+		  If TOP > N
+      Then write ('STACK OVERFLOW')
+      Return
+  2. [Increment TOP] TOP TOP + 1
+  3. [Insert Element]
+    S[TOP] ← X
+  4. [Finished]
+    Return
+
+
+----POP(S, TOP)----
+  1. [Check for stack underflow]
+    If TOP = 0
+    Then write ('STACK UNDERFLOW')
+    Return (0)
+  2. [Decrement TOP] TOP ← TOP - 1
+  3. [Return former top element of stack]
+    Return(S[TOP + 1])
+
+
+----PEEP(S, TOP, I)----
+  1. [Check for stack underflow]
+    If TOP-I+1 < 0
+    Then write ('STACK UNDERFLOW' Return (0)
+  2. [Return Ith element from top of the stack]
+    Return(S[TOP-I+1])
+
+
+----CHANGE(S, TOP, X, I)----
+  1. [Check for stack underflow]
+    If TOP-I+10
+    Then write ('STACK UNDERFLOW')
+    Return
+  2. [Change Ith element from top of the stack]
+    S[TOP-I+1] X
+  3. [Finished]
+    Return
